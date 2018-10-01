@@ -1,0 +1,16 @@
+aaa rdfs:domain xxx
+yyy aaa zzz
+bbb rdfs:domain ttt
+yyy bbb zzz
+aaa rdfs:range xxx
+xxx rdfs:subPropertyOf yyy
+yyy rdfs:subPropertyOf zzz
+xxx rdf:type rdf:Property
+xxx rdf:type rdfs:Class
+xxx rdfs:subClassOf yyy
+zzz rdf:type xxx
+xxx rdf:type rdfs:Class
+xxx rdfs:subClassOf yyy
+yyy rdfs:subClassOf zzz
+xxx rdf:type rdfs:Datatype
+xxx rdf:type rdfs:ContainerMembershipProperty
