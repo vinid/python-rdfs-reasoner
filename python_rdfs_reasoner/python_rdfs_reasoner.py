@@ -48,7 +48,7 @@ class Entailment:
         i = 2
         while entailed != []:
             print("Printing Set " + str(i))
-            print(entailed)
+            
             with open(self.path + "K_" + str(i), "w") as kg_inf_write:
                 i = i+1
                 for k in entailed:
@@ -101,7 +101,7 @@ class Entailment:
         #for i in infrenced_axioms:
         #    if i in self.jena_inferenced:
         #        assioms.append(i)
-        
+
         new_k = []
         for elem in infrenced_axioms:
             if elem not in new_k:
@@ -121,15 +121,15 @@ print(len(ent.jena_inferenced))
 print(len(ent.inferenced_triples))
 print("Jena - Tool")
 print(len(diff(ent.jena_inferenced, ent.inferenced_triples)))
-print(([" ".join(k) for k in (diff(ent.jena_inferenced, ent.inferenced_triples))]))
+#print(([" ".join(k) for k in (diff(ent.jena_inferenced, ent.inferenced_triples))]))
 
 print("Tool - Jena")
 print(len(diff(ent.inferenced_triples, ent.jena_inferenced)))
-print(([" ".join(k) for k in (diff(ent.inferenced_triples,ent.jena_inferenced))]))
+#print(([" ".join(k) for k in (diff(ent.inferenced_triples,ent.jena_inferenced))]))
 
 print("Inferences")
-print(ent.inferenced_triples)
-print(([" ".join(k) for k in (ent.inferenced_triples)]))
+#print(ent.inferenced_triples)
+#print(([" ".join(k) for k in (ent.inferenced_triples)]))
 
-print("Jena Inferences")
-print(([" ".join(k) for k in (ent.jena_inferenced)]))
+#print("Jena Inferences")
+#print(([" ".join(k) for k in (ent.jena_inferenced)]))

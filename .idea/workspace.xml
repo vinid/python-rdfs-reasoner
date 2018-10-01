@@ -22,8 +22,8 @@
       <file leaf-file-name="python_rdfs_reasoner.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/python_rdfs_reasoner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1073">
-              <caret line="103" column="8" lean-forward="false" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
+            <state relative-caret-position="261">
+              <caret line="50" column="12" lean-forward="false" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
               <folding>
                 <element signature="e#44#55#0" expanded="true" />
               </folding>
@@ -947,8 +947,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/python_rdfs_reasoner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1073">
-          <caret line="103" column="8" lean-forward="false" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
+        <state relative-caret-position="261">
+          <caret line="50" column="12" lean-forward="false" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
           <folding>
             <element signature="e#44#55#0" expanded="true" />
           </folding>
