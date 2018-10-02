@@ -8,7 +8,7 @@ The tool filters out those inferences that are not made by Jena.
 
 To generate the inferences from the axiom you can use the following command.
 ```python
-python2.7 python_rdfs_reasoner/python_rdfs_reasoner.py -f knowledge_graphs/DAO_2.json
+python2.7 python_rdfs_reasoner.py -f knowledge_graphs/DAO_2.json
 ```
 
 ## Chain Retrieval
@@ -16,4 +16,4 @@ python2.7 python_rdfs_reasoner/python_rdfs_reasoner.py -f knowledge_graphs/DAO_2
 To print the chain of relation inferences that generated a given axiom you can use the following command.
 
 ```python
-python2.7 python_rdfs_reasoner/chain_inferences.py -f debug/debug_saved_graph_inferences -i ":Drug rdfs:subClassOf rdfs:Resource"```
+python2.7 chain_inferences.py -f debug/debug_saved_graph_inferences -i ":Drug rdfs:subClassOf rdfs:Resource"```

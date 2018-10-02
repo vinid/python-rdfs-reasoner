@@ -32,29 +32,32 @@ class Entailment:
         self.triples = self.json_data["OriginalAxioms"]
         self.triples = [k.split() for k in self.triples]
 
-
         self.jena_inferenced = self.json_data["InferredAxioms"]
         self.jena_inferenced = [k.split() for k in self.jena_inferenced]
-
 
         self.path  = "inferenced/" + self.kg_file_name.split("/")[-1] + "/"
         if not os.path.exists(self.path):
             os.makedirs(self.path)
 
         # Creating the graph of the triples inferred by Jena
+
         with open(self.path + "K_Jena_Inferrence", "w") as kg_inf_write:
             for k in self.jena_inferenced:
                 kg_inf_write.write(k[0] + " " + k[1] + " " + k[2] + " ." + "\n")
 
         # Creating the first graph with the triples
-        with open(self.path + "K_0", "w") as kg_inf_write:
-            for k in self.triples:
-                kg_inf_write.write(k[0] + " " + k[1] + " " + k[2] + " ." + "\n")
+        with open(self.path + "K_0.json", "w") as kg_inf_write:
+            #for k in self.triples:
+            #    kg_inf_write.write(k[0] + " " + k[1] + " " + k[2] + " ." + "\n")
+            self.json_data["InferredAxioms"] = [" ".join(k) for k in self.triples]
+            json.dump(self.json_data,kg_inf_write)
 
         # Creating the second graph with the axiomatic triples
-        with open(self.path + "K_1", "w") as kg_inf_write:
-            for k in self.lines:
-                kg_inf_write.write(k[0] + " " + k[1] + " " + k[2] + " ." + "\n")
+        with open(self.path + "K_1.json", "w") as kg_inf_write:
+            #for k in self.lines:
+            #    kg_inf_write.write(k[0] + " " + k[1] + " " + k[2] + " ." + "\n")
+            self.json_data["InferredAxioms"] = [" ".join(k) for k in self.triples]
+            json.dump(self.json_data,kg_inf_write)
 
         logging.info('Adding RDFS AXIOMS')
         self.triples = self.triples + self.lines
@@ -67,10 +70,12 @@ class Entailment:
 
         while entailed != []:
 
-            with open(self.path + "K_" + str(chain_inference_number), "w") as kg_inf_write:
+            with open(self.path + "K_" + str(chain_inference_number) + ".json", "w") as kg_inf_write:
                 chain_inference_number = chain_inference_number+1
                 for k in entailed:
-                    kg_inf_write.write(k[0] + " " + k[1] + " " + k[2] + " ." + "\n")
+                    #kg_inf_write.write(k[0] + " " + k[1] + " " + k[2] + " ." + "\n")
+                    self.json_data["InferredAxioms"] = [" ".join(k) for k in self.triples]
+                    json.dump(self.json_data,kg_inf_write)
 
             self.triples += entailed
             self.inferenced_triples += entailed
