@@ -1,266 +1,33 @@
-predose:has_slang_term rdf:type rdfs:Resource
-owl:sameAs rdf:type rdfs:Resource
-predose:has_preparation_method rdfs:subPropertyOf predose:has_preparation_method
-predose:with_frequency rdfs:subPropertyOf predose:with_frequency
-rdf:type rdfs:subPropertyOf rdf:type
-rdfs:domain rdfs:subPropertyOf rdfs:domain
-rdfs:range rdfs:subPropertyOf rdfs:range
-rdfs:subPropertyOf rdfs:subPropertyOf rdfs:subPropertyOf
-rdfs:subClassOf rdfs:subPropertyOf rdfs:subClassOf
-rdf:subject rdfs:subPropertyOf rdf:subject
-rdf:predicate rdfs:subPropertyOf rdf:predicate
-rdf:object rdfs:subPropertyOf rdf:object
-rdfs:member rdfs:subPropertyOf rdfs:member
-rdf:first rdfs:subPropertyOf rdf:first
-rdf:rest rdfs:subPropertyOf rdf:rest
-rdfs:seeAlso rdfs:subPropertyOf rdfs:seeAlso
-rdfs:isDefinedBy rdfs:subPropertyOf rdfs:isDefinedBy
-rdfs:comment rdfs:subPropertyOf rdfs:comment
-rdfs:label rdfs:subPropertyOf rdfs:label
-rdf:value rdfs:subPropertyOf rdf:value
-:drug_type rdfs:subPropertyOf :drug_type
-:Tramadol rdfs:subClassOf rdfs:Resource
-:Stimulant rdfs:subClassOf rdfs:Resource
-rdf:Alt rdfs:subClassOf rdfs:Resource
-rdf:Bag rdfs:subClassOf rdfs:Resource
-rdf:Seq rdfs:subClassOf rdfs:Resource
-rdfs:ContainerMembershipProperty rdfs:subClassOf rdfs:Resource
-rdfs:Datatype rdfs:subClassOf rdfs:Resource
-owl:NamedIndividual rdfs:subClassOf rdfs:Resource
-:Oxycodone_IR rdfs:subClassOf rdfs:Resource
-:Cannabinoids rdfs:subClassOf rdfs:Resource
-owl:ObjectProperty rdfs:subClassOf rdfs:Resource
-:Unit rdfs:subClassOf rdfs:Resource
-:Route_of_administration rdfs:subClassOf rdfs:Resource
-owl:Ontology rdfs:subClassOf rdfs:Resource
-:Methadone rdfs:subClassOf rdfs:Resource
-:Buprenorphine_analgesic rdfs:subClassOf rdfs:Resource
-owl:FunctionalProperty rdfs:subClassOf rdfs:Resource
-:Morphine rdfs:subClassOf rdfs:Resource
-owl:Class rdfs:subClassOf rdfs:Resource
-:Hydromorphone rdfs:subClassOf rdfs:Resource
-:Hallucinogen rdfs:subClassOf rdfs:Resource
-:Drug rdfs:subClassOf rdfs:Resource
-:User_drug_usage rdfs:subClassOf rdfs:Resource
-rdfs:Resource rdfs:subClassOf rdfs:Resource
-rdf:Property rdfs:subClassOf rdfs:Resource
-rdfs:Class rdfs:subClassOf rdfs:Resource
-rdf:Statement rdfs:subClassOf rdfs:Resource
-rdf:List rdfs:subClassOf rdfs:Resource
-:Frequency rdfs:subClassOf rdfs:Resource
-:preparation rdfs:subClassOf rdfs:Resource
-rdfs:Literal rdfs:subClassOf rdfs:Resource
-:Opioid rdfs:subClassOf rdfs:Resource
-rdfs:Container rdfs:subClassOf rdfs:Resource
-http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/2476 rdf:type rdfs:Class
-rdf:type rdf:type rdfs:Class
-predose:has_slang_term rdf:type rdfs:Class
-Stims rdf:type rdfs:Class
-dbpedia:Tramadol rdf:type rdfs:Class
-rdfs:subClassOf rdf:type rdfs:Class
-drugbank:DB00956 rdf:type rdfs:Class
-:Laudacon rdf:type rdfs:Class
-:Tylox rdf:type rdfs:Class
-dbpedia:Kratom rdf:type rdfs:Class
-owl:sameAs rdf:type rdfs:Class
-:Kratom rdf:type rdfs:Class
-:Hashish rdf:type rdfs:Class
-:drug_type rdf:type rdfs:Class
-:millilitre rdf:type rdfs:Class
-:Ms_Contin rdf:type rdfs:Class
-:plugging rdf:type rdfs:Class
-plug rdf:type rdfs:Class
-plugged rdf:type rdfs:Class
-:oral rdf:type rdfs:Class
-http://knoesis.org/ontology/predose rdf:type rdfs:Class
-:LSD rdf:type rdfs:Class
-acid rdf:type rdfs:Class
-:Adanon rdf:type rdfs:Class
-rdfs:label rdf:type rdfs:Class
-Laudacon rdf:type rdfs:Class
-:Buprenex rdf:type rdfs:Class
-predose:has_preparation_method rdf:type rdfs:Class
-Stimulants rdf:type rdfs:Class
-:Duromorph rdf:type rdfs:Class
-Duromorph rdf:type rdfs:Class
-mscontins rdf:type rdfs:Class
-http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/5523 rdf:type rdfs:Class
-:Fenadone rdf:type rdfs:Class
-m2:n5b rdf:type rdfs:Class
-hash rdf:type rdfs:Class
-ms rdf:type rdfs:Class
-ate rdf:type rdfs:Class
-Stim rdf:type rdfs:Class
-predose:with_frequency rdf:type rdfs:Class
-rdfs:range rdf:type rdfs:Class
-:Depodur rdf:type rdfs:Class
-Depodur rdf:type rdfs:Class
-Tylox rdf:type rdfs:Class
-drugbank:DB00193 rdf:type rdfs:Class
-Buprenex rdf:type rdfs:Class
-Stimulant rdf:type rdfs:Class
-eat rdf:type rdfs:Class
-drugbank:DB01452 rdf:type rdfs:Class
-rdfs:domain rdf:type rdfs:Class
-Tram rdf:type rdfs:Class
-:Side_effect rdf:type rdfs:Class
-opencyc:Mx4rwBGgXJwpEbGdrcN5Y29ycA rdf:type rdfs:Class
-Adanon rdf:type rdfs:Class
-dbpedia:Lorazepam rdf:type rdfs:Class
-mscontin rdf:type rdfs:Class
-dbpedia:Side_effect rdf:type rdfs:Class
-:Lorazepam rdf:type rdfs:Class
-m4:l6z8 rdf:type rdfs:Class
-http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/3648 rdf:type rdfs:Class
-Tramadol rdf:type rdfs:Class
-Trams rdf:type rdfs:Class
-Fenadone rdf:type rdfs:Class
-rdfs:subPropertyOf rdf:type rdfs:Class
-rdf:subject rdf:type rdfs:Class
-rdf:predicate rdf:type rdfs:Class
-rdf:object rdf:type rdfs:Class
-rdfs:member rdf:type rdfs:Class
-rdf:first rdf:type rdfs:Class
-rdf:rest rdf:type rdfs:Class
-rdfs:seeAlso rdf:type rdfs:Class
-rdfs:isDefinedBy rdf:type rdfs:Class
-rdfs:comment rdf:type rdfs:Class
-rdf:value rdf:type rdfs:Class
-:Tramadol rdfs:subClassOf :Tramadol
-:Stimulant rdfs:subClassOf :Stimulant
-rdf:Alt rdfs:subClassOf rdf:Alt
-rdf:Bag rdfs:subClassOf rdf:Bag
-rdf:Seq rdfs:subClassOf rdf:Seq
-rdfs:ContainerMembershipProperty rdfs:subClassOf rdfs:ContainerMembershipProperty
-rdfs:Datatype rdfs:subClassOf rdfs:Datatype
-owl:NamedIndividual rdfs:subClassOf owl:NamedIndividual
-:Oxycodone_IR rdfs:subClassOf :Oxycodone_IR
-:Cannabinoids rdfs:subClassOf :Cannabinoids
-owl:ObjectProperty rdfs:subClassOf owl:ObjectProperty
-:Unit rdfs:subClassOf :Unit
-:Route_of_administration rdfs:subClassOf :Route_of_administration
-owl:Ontology rdfs:subClassOf owl:Ontology
-:Methadone rdfs:subClassOf :Methadone
-:Buprenorphine_analgesic rdfs:subClassOf :Buprenorphine_analgesic
-owl:FunctionalProperty rdfs:subClassOf owl:FunctionalProperty
-:Morphine rdfs:subClassOf :Morphine
-owl:Class rdfs:subClassOf owl:Class
-:Hydromorphone rdfs:subClassOf :Hydromorphone
-:Hallucinogen rdfs:subClassOf :Hallucinogen
-:Drug rdfs:subClassOf :Drug
-:User_drug_usage rdfs:subClassOf :User_drug_usage
-rdf:Property rdfs:subClassOf rdf:Property
-rdfs:Class rdfs:subClassOf rdfs:Class
-rdf:Statement rdfs:subClassOf rdf:Statement
-rdf:List rdfs:subClassOf rdf:List
-:Frequency rdfs:subClassOf :Frequency
-:preparation rdfs:subClassOf :preparation
-rdfs:Literal rdfs:subClassOf rdfs:Literal
-:Opioid rdfs:subClassOf :Opioid
-rdfs:Container rdfs:subClassOf rdfs:Container
-http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/2476 rdfs:subClassOf rdfs:Literal
-rdf:type rdfs:subClassOf rdfs:Literal
-owl:NamedIndividual rdfs:subClassOf rdfs:Literal
-:Stimulant rdfs:subClassOf rdfs:Literal
-predose:has_slang_term rdfs:subClassOf rdfs:Literal
-Stims rdfs:subClassOf rdfs:Literal
-dbpedia:Tramadol rdfs:subClassOf rdfs:Literal
-:Tramadol rdfs:subClassOf rdfs:Literal
-rdfs:subClassOf rdfs:subClassOf rdfs:Literal
-:Opioid rdfs:subClassOf rdfs:Literal
-drugbank:DB00956 rdfs:subClassOf rdfs:Literal
-:Laudacon rdfs:subClassOf rdfs:Literal
-:Tylox rdfs:subClassOf rdfs:Literal
-:Oxycodone_IR rdfs:subClassOf rdfs:Literal
-dbpedia:Kratom rdfs:subClassOf rdfs:Literal
-owl:sameAs rdfs:subClassOf rdfs:Literal
-:Kratom rdfs:subClassOf rdfs:Literal
-:Hashish rdfs:subClassOf rdfs:Literal
-:Cannabinoids rdfs:subClassOf rdfs:Literal
-:drug_type rdfs:subClassOf rdfs:Literal
-owl:ObjectProperty rdfs:subClassOf rdfs:Literal
-:millilitre rdfs:subClassOf rdfs:Literal
-:Unit rdfs:subClassOf rdfs:Literal
-:Ms_Contin rdfs:subClassOf rdfs:Literal
-:plugging rdfs:subClassOf rdfs:Literal
-plug rdfs:subClassOf rdfs:Literal
-plugged rdfs:subClassOf rdfs:Literal
-:oral rdfs:subClassOf rdfs:Literal
-:Route_of_administration rdfs:subClassOf rdfs:Literal
-http://knoesis.org/ontology/predose rdfs:subClassOf rdfs:Literal
-owl:Ontology rdfs:subClassOf rdfs:Literal
-:LSD rdfs:subClassOf rdfs:Literal
-acid rdfs:subClassOf rdfs:Literal
-:Adanon rdfs:subClassOf rdfs:Literal
-:Methadone rdfs:subClassOf rdfs:Literal
-rdfs:label rdfs:subClassOf rdfs:Literal
-Laudacon rdfs:subClassOf rdfs:Literal
-:Buprenex rdfs:subClassOf rdfs:Literal
-:Buprenorphine_analgesic rdfs:subClassOf rdfs:Literal
-predose:has_preparation_method rdfs:subClassOf rdfs:Literal
-owl:FunctionalProperty rdfs:subClassOf rdfs:Literal
-Stimulants rdfs:subClassOf rdfs:Literal
-:Duromorph rdfs:subClassOf rdfs:Literal
-Duromorph rdfs:subClassOf rdfs:Literal
-mscontins rdfs:subClassOf rdfs:Literal
-:Drug rdfs:subClassOf rdfs:Literal
-:Morphine rdfs:subClassOf rdfs:Literal
-http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/5523 rdfs:subClassOf rdfs:Literal
-:Fenadone rdfs:subClassOf rdfs:Literal
-m2:n5b rdfs:subClassOf rdfs:Literal
-hash rdfs:subClassOf rdfs:Literal
-ms rdfs:subClassOf rdfs:Literal
-ate rdfs:subClassOf rdfs:Literal
-Stim rdfs:subClassOf rdfs:Literal
-predose:with_frequency rdfs:subClassOf rdfs:Literal
-rdfs:range rdfs:subClassOf rdfs:Literal
-:Frequency rdfs:subClassOf rdfs:Literal
-:Depodur rdfs:subClassOf rdfs:Literal
-Depodur rdfs:subClassOf rdfs:Literal
-Tylox rdfs:subClassOf rdfs:Literal
-drugbank:DB00193 rdfs:subClassOf rdfs:Literal
-Buprenex rdfs:subClassOf rdfs:Literal
-owl:Class rdfs:subClassOf rdfs:Literal
-Stimulant rdfs:subClassOf rdfs:Literal
-eat rdfs:subClassOf rdfs:Literal
-drugbank:DB01452 rdfs:subClassOf rdfs:Literal
-rdfs:domain rdfs:subClassOf rdfs:Literal
-Tram rdfs:subClassOf rdfs:Literal
-:Side_effect rdfs:subClassOf rdfs:Literal
-opencyc:Mx4rwBGgXJwpEbGdrcN5Y29ycA rdfs:subClassOf rdfs:Literal
-:preparation rdfs:subClassOf rdfs:Literal
-Adanon rdfs:subClassOf rdfs:Literal
-:User_drug_usage rdfs:subClassOf rdfs:Literal
-dbpedia:Lorazepam rdfs:subClassOf rdfs:Literal
-mscontin rdfs:subClassOf rdfs:Literal
-:Hydromorphone rdfs:subClassOf rdfs:Literal
-dbpedia:Side_effect rdfs:subClassOf rdfs:Literal
-:Lorazepam rdfs:subClassOf rdfs:Literal
-m4:l6z8 rdfs:subClassOf rdfs:Literal
-http://www4.wiwiss.fu-berlin.de/sider/resource/drugs/3648 rdfs:subClassOf rdfs:Literal
-:Hallucinogen rdfs:subClassOf rdfs:Literal
-Tramadol rdfs:subClassOf rdfs:Literal
-Trams rdfs:subClassOf rdfs:Literal
-Fenadone rdfs:subClassOf rdfs:Literal
-rdfs:Resource rdfs:subClassOf rdfs:Literal
-rdf:Property rdfs:subClassOf rdfs:Literal
-rdfs:subPropertyOf rdfs:subClassOf rdfs:Literal
-rdfs:Class rdfs:subClassOf rdfs:Literal
-rdf:subject rdfs:subClassOf rdfs:Literal
-rdf:Statement rdfs:subClassOf rdfs:Literal
-rdf:predicate rdfs:subClassOf rdfs:Literal
-rdf:object rdfs:subClassOf rdfs:Literal
-rdfs:member rdfs:subClassOf rdfs:Literal
-rdf:first rdfs:subClassOf rdfs:Literal
-rdf:List rdfs:subClassOf rdfs:Literal
-rdf:rest rdfs:subClassOf rdfs:Literal
-rdfs:seeAlso rdfs:subClassOf rdfs:Literal
-rdfs:isDefinedBy rdfs:subClassOf rdfs:Literal
-rdfs:comment rdfs:subClassOf rdfs:Literal
-rdf:value rdfs:subClassOf rdfs:Literal
-rdf:Alt rdfs:subClassOf rdfs:Literal
-rdfs:Container rdfs:subClassOf rdfs:Literal
-rdf:Bag rdfs:subClassOf rdfs:Literal
-rdf:Seq rdfs:subClassOf rdfs:Literal
-rdfs:ContainerMembershipProperty rdfs:subClassOf rdfs:Literal
-rdfs:Datatype rdfs:subClassOf rdfs:Literal
+rdf:subject rdfs:subPropertyOf rdf:subject .
+rdf:predicate rdfs:subPropertyOf rdf:predicate .
+rdf:object rdfs:subPropertyOf rdf:object .
+rdf:first rdfs:subPropertyOf rdf:first .
+rdf:rest rdfs:subPropertyOf rdf:rest .
+rdfs:seeAlso rdfs:subPropertyOf rdfs:seeAlso .
+rdfs:isDefinedBy rdfs:subPropertyOf rdfs:isDefinedBy .
+:Stimulant rdfs:subClassOf rdfs:Resource .
+:Drug rdfs:subClassOf rdfs:Resource .
+:User_drug_usage rdfs:subClassOf rdfs:Resource .
+rdfs:Resource rdfs:subClassOf rdfs:Resource .
+rdf:Property rdfs:subClassOf rdfs:Resource .
+rdfs:Class rdfs:subClassOf rdfs:Resource .
+rdf:Statement rdfs:subClassOf rdfs:Resource .
+rdf:List rdfs:subClassOf rdfs:Resource .
+:Frequency rdfs:subClassOf rdfs:Resource .
+:preparation rdfs:subClassOf rdfs:Resource .
+rdfs:Literal rdfs:subClassOf rdfs:Resource .
+:Tramadol rdfs:subClassOf :Tramadol .
+:Stimulant rdfs:subClassOf :Stimulant .
+rdf:Alt rdfs:subClassOf rdf:Alt .
+rdf:Bag rdfs:subClassOf rdf:Bag .
+rdf:Seq rdfs:subClassOf rdf:Seq .
+rdfs:ContainerMembershipProperty rdfs:subClassOf rdfs:ContainerMembershipProperty .
+rdfs:Datatype rdfs:subClassOf rdfs:Datatype .
+:Drug rdfs:subClassOf :Drug .
+:User_drug_usage rdfs:subClassOf :User_drug_usage .
+rdf:Property rdfs:subClassOf rdf:Property .
+rdfs:Class rdfs:subClassOf rdfs:Class .
+:Frequency rdfs:subClassOf :Frequency .
+:preparation rdfs:subClassOf :preparation .
+:Opioid rdfs:subClassOf :Opioid .
+rdfs:Container rdfs:subClassOf rdfs:Container .
