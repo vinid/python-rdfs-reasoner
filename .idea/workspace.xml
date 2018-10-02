@@ -22,7 +22,7 @@
       <file leaf-file-name="python_rdfs_reasoner.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/python_rdfs_reasoner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
+            <state relative-caret-position="3074">
               <caret line="106" column="54" lean-forward="false" selection-start-line="106" selection-start-column="54" selection-end-line="106" selection-end-column="54" />
               <folding>
                 <element signature="e#44#55#0" expanded="true" />
@@ -34,7 +34,7 @@
       <file leaf-file-name="chain_inferences.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/chain_inferences.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
+            <state relative-caret-position="1015">
               <caret line="35" column="4" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="72" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -53,10 +53,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="entailment_rules.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="entailment_rules.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/entailment_rules.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
+            <state relative-caret-position="5974">
               <caret line="206" column="23" lean-forward="true" selection-start-line="206" selection-start-column="23" selection-end-line="206" selection-end-column="23" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -65,11 +65,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="debug_saved_graph_inferences" pinned="false" current-in-tab="true">
+      <file leaf-file-name="debug_saved_graph_inferences" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/debug/debug_saved_graph_inferences">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-12864">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements_dev.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements_dev.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="58">
+              <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -144,8 +164,8 @@
       <find>rdf:Alt rdfs:subClassOf rdfs:Container</find>
       <find>saved_inferences</find>
       <find>:Drug rdfs:subClassOf :</find>
-      <find>:Drug rdfs:subClassOf rdfs:Resource</find>
       <find>subclass</find>
+      <find>:Drug rdfs:subClassOf rdfs:Resource</find>
     </findStrings>
     <replaceStrings>
       <replace>saved_inferences_list.add</replace>
@@ -177,6 +197,7 @@
         <option value="$PROJECT_DIR$/chain_inferences.py" />
         <option value="$PROJECT_DIR$/python_rdfs_reasoner/chain_inferences.py" />
         <option value="$PROJECT_DIR$/python_rdfs_reasoner/python_rdfs_reasoner.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
       </list>
     </option>
   </component>
@@ -310,6 +331,7 @@
       <recent name="$PROJECT_DIR$/python_rdfs_reasoner" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/python_rdfs_reasoner/knowledge_graphs" />
     </key>
   </component>
@@ -617,22 +639,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/inferenced/mincats_1.json/K_2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/entailment_rules.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3509">
-          <caret line="121" column="95" lean-forward="false" selection-start-line="121" selection-start-column="95" selection-end-line="121" selection-end-column="95" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/test_kg/test_kg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -978,29 +984,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/entailment_rules.py">
+    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/debug/debug_saved_graph_inferences">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="206" column="23" lean-forward="true" selection-start-line="206" selection-start-column="23" selection-end-line="206" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-12864">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/chain_inferences.py">
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="35" column="4" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="58">
+          <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements_dev.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/python_rdfs_reasoner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
+        <state relative-caret-position="3074">
           <caret line="106" column="54" lean-forward="false" selection-start-line="106" selection-start-column="54" selection-end-line="106" selection-end-column="54" />
           <folding>
             <element signature="e#44#55#0" expanded="true" />
@@ -1008,11 +1018,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/debug/debug_saved_graph_inferences">
+    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/chain_inferences.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12864">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="1015">
+          <caret line="35" column="4" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/entailment_rules.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5974">
+          <caret line="206" column="23" lean-forward="true" selection-start-line="206" selection-start-column="23" selection-end-line="206" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

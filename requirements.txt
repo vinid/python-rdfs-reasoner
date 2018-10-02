@@ -1,0 +1,4 @@
+pypatt==0.3.1
+pandas==0.19.2
+networkx==1.11
+
