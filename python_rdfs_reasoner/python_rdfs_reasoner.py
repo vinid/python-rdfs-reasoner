@@ -69,13 +69,12 @@ class Entailment:
         logging.info('Ended Generation of Chain of Inference number'  + str(chain_inference_number))
 
         while entailed != []:
-
+            self.json_data["InferredAxioms"] = []
             with open(self.path + "K_" + str(chain_inference_number) + ".json", "w") as kg_inf_write:
                 chain_inference_number = chain_inference_number+1
-                for k in entailed:
                     #kg_inf_write.write(k[0] + " " + k[1] + " " + k[2] + " ." + "\n")
-                    self.json_data["InferredAxioms"] = [" ".join(k) for k in self.triples]
-                    json.dump(self.json_data,kg_inf_write)
+                self.json_data["InferredAxioms"] += [" ".join(k) for k in entailed]
+                json.dump(self.json_data,kg_inf_write)
 
             self.triples += entailed
             self.inferenced_triples += entailed
