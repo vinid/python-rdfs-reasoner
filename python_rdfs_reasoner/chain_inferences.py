@@ -6,14 +6,14 @@ def get_chain_of_inference(node, G):
     neig = G.edges(node)
     if len(neig) == 2:
         print(neig[0][1] + " & " + neig[1][1])
-        print ("\t=>" + node, "red")
+        print ("\t=>" + node)
         print("--")
         get_chain_of_inference(neig[0][1], G)
         print("--")
         get_chain_of_inference(neig[1][1], G)
     elif len(neig) == 1:
         print(neig[0][1])
-        print ("\t=>" + node, "red")
+        print ("\t=>" + node)
         print("--")
         get_chain_of_inference(neig[0][1], G)
         print("--")
@@ -28,7 +28,7 @@ def main():
                         help="Inferenced axiom to be explored")
 
     args = parser.parse_args()
-    load_triples = pd.read_csv("debug/debug_saved_graph_inferences", sep=",", names=["head", "rel", "tail"])
+    load_triples = pd.read_csv(args.file_name, sep=",", names=["head", "rel", "tail"])
 
     G = nx.DiGraph()
 

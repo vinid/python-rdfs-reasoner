@@ -18,6 +18,10 @@ class Entailment:
     def __init__(self, kg_file_name):
         self.kg_file_name = kg_file_name
 
+        if not os.path.exists("chains/"):
+            os.makedirs("chains/")
+
+        self.debug_graph_file = open("chains/" + self.kg_file_name.split("/")[-1] + "_load_chainer", "w")
 
         with open(self.kg_file_name) as f:
             self.json_data = json.load(f)
@@ -89,39 +93,60 @@ class Entailment:
 
     def run_entailment(self):
 
-        #pool = Pool(processes=10)
+        pool = Pool(processes=10)
 
-        #rdfs1 = pool.apply_async(match_rdfs1, args = (self.triples,))
-        #rdfs2 = pool.apply_async(match_rdfs2, args = (self.triples,))
-        #rdfs3 = pool.apply_async(match_rdfs3, args = (self.triples,))
-        #rdfs4a = pool.apply_async(match_rdfs4a, args = (self.triples,))
-        #rdfs4b = pool.apply_async(match_rdfs4b, args = (self.triples,))
-        #rdfs5 = pool.apply_async(match_rdfs5, args = (self.triples,))
-        #rdfs6 = pool.apply_async(match_rdfs6, args = (self.triples,))
-        #rdfs7 = pool.apply_async(match_rdfs7, args = (self.triples,))
-        #rdfs8 = pool.apply_async(match_rdfs8, args = (self.triples,))
-        #rdfs9 = pool.apply_async(match_rdfs9, args = (self.triples,))
-        #rdfs10 = pool.apply_async(match_rdfs10, args = (self.triples,))
-        #rdfs11 = pool.apply_async(match_rdfs11, args = (self.triples,))
-        #rdfs12 = pool.apply_async(match_rdfs12, args = (self.triples,))
-        #rdfs13 = pool.apply_async(match_rdfs13, args = (self.triples,))
+        rdfs1 = pool.apply_async(match_rdfs1, args = (self.triples,))
+        rdfs2 = pool.apply_async(match_rdfs2, args = (self.triples,))
+        rdfs3 = pool.apply_async(match_rdfs3, args = (self.triples,))
+        rdfs4a = pool.apply_async(match_rdfs4a, args = (self.triples,))
+        rdfs4b = pool.apply_async(match_rdfs4b, args = (self.triples,))
+        rdfs5 = pool.apply_async(match_rdfs5, args = (self.triples,))
+        rdfs6 = pool.apply_async(match_rdfs6, args = (self.triples,))
+        rdfs7 = pool.apply_async(match_rdfs7, args = (self.triples,))
+        rdfs8 = pool.apply_async(match_rdfs8, args = (self.triples,))
+        rdfs9 = pool.apply_async(match_rdfs9, args = (self.triples,))
+        rdfs10 = pool.apply_async(match_rdfs10, args = (self.triples,))
+        rdfs11 = pool.apply_async(match_rdfs11, args = (self.triples,))
+        rdfs12 = pool.apply_async(match_rdfs12, args = (self.triples,))
+        rdfs13 = pool.apply_async(match_rdfs13, args = (self.triples,))
 
         infrenced_axioms = []
 
-        infrenced_axioms += match_rdfs1(self.triples,)
-        infrenced_axioms +=  match_rdfs2(self.triples,)# rdfs1.get()
-        infrenced_axioms += match_rdfs3(self.triples,)
-        infrenced_axioms += match_rdfs4b(self.triples,)
-        infrenced_axioms += match_rdfs4a(self.triples,)
-        infrenced_axioms += match_rdfs5(self.triples,)
-        infrenced_axioms += match_rdfs6(self.triples,)
-        infrenced_axioms += match_rdfs7(self.triples,)
-        infrenced_axioms += match_rdfs8(self.triples,)
-        infrenced_axioms += match_rdfs9(self.triples,)
-        infrenced_axioms += match_rdfs10(self.triples,)
-        infrenced_axioms += match_rdfs11(self.triples,)
-        infrenced_axioms += match_rdfs12(self.triples,)
-        infrenced_axioms += match_rdfs13(self.triples,)
+        a = rdfs1.get()
+        b = rdfs2.get()
+        c = rdfs3.get()
+        d = rdfs4a.get()
+        e = rdfs4b.get()
+        f = rdfs5.get()
+        g = rdfs6.get()
+        h = rdfs7.get()
+        i = rdfs8.get()
+        l = rdfs9.get()
+        m = rdfs10.get()
+        n = rdfs11.get()
+        o = rdfs12.get()
+        p = rdfs13.get()
+
+        infrenced_axioms += a[0] #match_rdfs1(self.triples,)
+        infrenced_axioms += b[0] #match_rdfs2(self.triples,)# rdfs1.get()
+        infrenced_axioms += c[0] #match_rdfs3(self.triples,)
+        infrenced_axioms += d[0] #match_rdfs4b(self.triples,)
+        infrenced_axioms += e[0] #match_rdfs4a(self.triples,)
+        infrenced_axioms += f[0] #match_rdfs5(self.triples,)
+        infrenced_axioms += g[0] #match_rdfs6(self.triples,)
+        infrenced_axioms += h[0] #match_rdfs7(self.triples,)
+        infrenced_axioms += i[0] #match_rdfs8(self.triples,)
+        infrenced_axioms += l[0] #match_rdfs9(self.triples,)
+        infrenced_axioms += m[0] #match_rdfs10(self.triples,)
+        infrenced_axioms += n[0] #match_rdfs11(self.triples,)
+        infrenced_axioms += o[0] #match_rdfs12(self.triples,)
+        infrenced_axioms += p[0] #match_rdfs13(self.triples,)
+
+        graph_inferences = [a[1],b[1],c[1],d[1],e[1],f[1],g[1],h[1],i[1],l[1],m[1],n[1],o[1],p[1]]
+
+        for k in graph_inferences:
+            for i in k:
+                self.debug_graph_file.write(i)
 
         # remove duplicate axioms
         new_k = []

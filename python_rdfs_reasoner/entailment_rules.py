@@ -6,7 +6,6 @@ if not os.path.exists("debug/"):
     os.makedirs("debug/")
 
 saved_inferences = open("debug/debug_saved_inferences", "w")
-saved_graph_inferences = open("debug/debug_saved_graph_inferences", "w")
 
 
 manager = Manager()
@@ -53,6 +52,7 @@ def match_one(triples, first = None, second = None, third = None):
 def match_rdfs1(triples):
     first_match = match_one(triples)
     all_values = []
+    inferences_paths = []
     for a,b,c in first_match:
 
         new_inf_one = [a, "rdf:type", "rdfs:Datatype"]
@@ -62,27 +62,27 @@ def match_rdfs1(triples):
         if not new_inf_one in triples and not new_inf_one in shared_list:
             all_values.append(new_inf_one)
             shared_list.append(new_inf_one)
-            saved_graph_inferences.write(" ".join([a,b,c]) + ",rdfs4a," + " ".join(new_inf_one) + "\n")
             shared_list.append(new_inf_one)
+            inferences_paths.append(" ".join([a,b,c]) + ",rdfs4a," + " ".join(new_inf_one) + "\n")
             saved_inferences.write(" ".join([a,b,c]) + " =4a> " + " ".join(new_inf_one) + "\n")
 
         if not new_inf_two in triples and not new_inf_two in shared_list:
             all_values.append(new_inf_two)
             shared_list.append(new_inf_two)
-            saved_graph_inferences.write(" ".join([a,b,c]) + ",rdfs4a," + " ".join(new_inf_two) + "\n")
             shared_list.append(new_inf_two)
             saved_inferences.write(" ".join([a,b,c]) + " =4a> " + " ".join(new_inf_two) + "\n")
-
+            inferences_paths.append(" ".join([a,b,c]) + ",rdfs4a," + " ".join(new_inf_two) + "\n")
         if not new_inf_three in triples and not new_inf_three in shared_list:
             all_values.append(new_inf_three)
             shared_list.append(new_inf_three)
-            saved_graph_inferences.write(" ".join([a,b,c]) + ",rdfs4a," + " ".join(new_inf_three) + "\n")
+            inferences_paths.append(" ".join([a,b,c]) + ",rdfs4a," + " ".join(new_inf_three) + "\n")
             shared_list.append(new_inf_three)
             saved_inferences.write(" ".join([a,b,c]) + " =4a> " + " ".join(new_inf_three) + "\n")
-    return all_values
+    return all_values, inferences_paths
 
 def match_rdfs2(triples):
     inferenced = []
+    inferences_paths = []
     first_match = match_one(triples, second='rdfs:domain')
     for first_match_triple in first_match:
         second_match = match_one(triples, second=first_match_triple[0])
@@ -93,14 +93,15 @@ def match_rdfs2(triples):
             if not new_inference in triples and not new_inference in shared_list:
                 inferenced.append(new_inference)
                 shared_list.append(new_inference)
-                saved_graph_inferences.write(" ".join(first_match_triple) + ",rdfs2," + " ".join(new_inference) + "\n")
-                saved_graph_inferences.write(" ".join(second_match_triple) + ",rdfs2," + " ".join(new_inference) + "\n")
+                inferences_paths.append(" ".join(first_match_triple) + ",rdfs2," + " ".join(new_inference) + "\n")
+                inferences_paths.append(" ".join(second_match_triple) + ",rdfs2," + " ".join(new_inference) + "\n")
                 saved_inferences.write(" ".join(first_match_triple) + " & " + " ".join(second_match_triple) + " =2> "  + " ".join(new_inference) + "\n")
 
-    return inferenced
+    return inferenced, inferences_paths
 
 def match_rdfs3(triples):
     inferenced = []
+    inferences_paths = []
     first_match = match_one(triples, second='rdfs:range')
     for first_match_triple in first_match:
         second_match = match_one(triples, second=first_match_triple[0])
@@ -110,43 +111,46 @@ def match_rdfs3(triples):
             if not new_inference in triples and not new_inference in shared_list:
                 inferenced.append(new_inference)
                 shared_list.append(new_inference)
-                saved_graph_inferences.write(" ".join(first_match_triple) + ",rdfs3," + " ".join(new_inference) + "\n")
-                saved_graph_inferences.write(" ".join(second_match_triple) + ",rdfs3," + " ".join(new_inference) + "\n")
+                inferences_paths.append(" ".join(first_match_triple) + ",rdfs3," + " ".join(new_inference) + "\n")
+                inferences_paths.append(" ".join(second_match_triple) + ",rdfs3," + " ".join(new_inference) + "\n")
                 saved_inferences.write(
                     " ".join(first_match_triple) + " & " + " ".join(second_match_triple) + " =3> " + " ".join(new_inference) + "\n")
 
-    return inferenced
+    return inferenced, inferences_paths
 
 def match_rdfs4a(triples):
     inferenced = []
+    inferences_paths = []
     first_match = match_one(triples)
     for first_match_triple in first_match:
         new_inference = [first_match_triple[0], "rdf:type", "rdfs:Resource"]
 
         if not new_inference in triples and not new_inference in shared_list:
             inferenced.append(new_inference)
-            saved_graph_inferences.write(" ".join(first_match_triple) + ",rdfs4a," + " ".join(new_inference) + "\n")
+            inferences_paths.append(" ".join(first_match_triple) + ",rdfs4a," + " ".join(new_inference) + "\n")
             shared_list.append(new_inference)
             saved_inferences.write(" ".join(first_match_triple) + " =4a> " + " ".join(new_inference) + "\n")
 
-    return inferenced
+    return inferenced, inferences_paths
 
 def match_rdfs4b(triples):
     inferenced = []
+    inferences_paths = []
     first_match = match_one(triples)
     for first_match_triple in first_match:
         new_inference = [first_match_triple[2], "rdf:type", "rdfs:Resource"]
 
         if not new_inference in triples and not new_inference in shared_list:
             inferenced.append(new_inference)
-            saved_graph_inferences.write(" ".join(first_match_triple) + ",rdfs4b," + " ".join(new_inference) + "\n")
+            inferences_paths.append(" ".join(first_match_triple) + ",rdfs4b," + " ".join(new_inference) + "\n")
             shared_list.append(new_inference)
             saved_inferences.write(" ".join(first_match_triple) + " =4b> "  + " ".join(new_inference) + "\n")
 
-    return inferenced
+    return inferenced, inferences_paths
 
 def match_rdfs5(triples):
     inferenced = []
+    inferences_paths = []
     first_match = match_one(triples, second='rdfs:subPropertyOf')
     for first_match_triple in first_match:
         second_match = match_one(triples, first=first_match_triple[2], second="rdfs:subPropertyOf")
@@ -156,29 +160,31 @@ def match_rdfs5(triples):
             if not new_inference in triples and not new_inference in shared_list:
                 inferenced.append(new_inference)
                 shared_list.append(new_inference)
-                saved_graph_inferences.write(" ".join(first_match_triple) + ",rdfs5," + " ".join(new_inference) + "\n")
-                saved_graph_inferences.write(" ".join(second_match_triple) + ",rdfs5," + " ".join(new_inference) + "\n")
+                inferences_paths.append(" ".join(first_match_triple) + ",rdfs5," + " ".join(new_inference) + "\n")
+                inferences_paths.append(" ".join(second_match_triple) + ",rdfs5," + " ".join(new_inference) + "\n")
                 saved_inferences.write(
                     " ".join(first_match_triple) + " & " + " ".join(second_match_triple) + " =5> " + " ".join(new_inference) + "\n")
 
-    return inferenced
+    return inferenced, inferences_paths
 
 def match_rdfs6(triples):
     inferenced = []
+    inferences_paths = []
     first_match = match_one(triples, second="rdf:type", third="rdf:Property")
     for first_match_triple in first_match:
         new_inference = [first_match_triple[0], "rdfs:subPropertyOf", first_match_triple[0]]
 
         if not new_inference in triples:
             inferenced.append(new_inference)
-            saved_graph_inferences.write(" ".join(first_match_triple) + ",rdfs6," + " ".join(new_inference) + "\n")
+            inferences_paths.append(" ".join(first_match_triple) + ",rdfs6," + " ".join(new_inference) + "\n")
             shared_list.append(new_inference)
             saved_inferences.write(" ".join(first_match_triple) + " =6> " + " ".join(new_inference) + "\n")
 
-    return inferenced
+    return inferenced, inferences_paths
 
 def match_rdfs7(triples):
     inferenced = []
+    inferences_paths = []
     first_match = match_one(triples, second='rdfs:subPropertyOf')
     for first_match_triple in first_match:
         second_match = match_one(triples, second=first_match_triple[0])
@@ -188,28 +194,30 @@ def match_rdfs7(triples):
             if not new_inference in triples and not new_inference in shared_list:
                 inferenced.append(new_inference)
                 shared_list.append(new_inference)
-                saved_graph_inferences.write(" ".join(first_match_triple) + ",rdfs7," + " ".join(new_inference) + "\n")
-                saved_graph_inferences.write(" ".join(second_match_triple) + ",rdfs7," + " ".join(new_inference) + "\n")
+                inferences_paths.append(" ".join(first_match_triple) + ",rdfs7," + " ".join(new_inference) + "\n")
+                inferences_paths.append(" ".join(second_match_triple) + ",rdfs7," + " ".join(new_inference) + "\n")
                 saved_inferences.write(
                     " ".join(first_match_triple) + " & " + " ".join(second_match_triple) + " =7> " + " ".join(new_inference) + "\n")
 
-    return inferenced
+    return inferenced, inferences_paths
 
 def match_rdfs8(triples):
     inferenced = []
+    inferences_paths = []
     first_match = match_one(triples, second="rdf:type", third="rdfs:Class")
     for first_match_triple in first_match:
         new_inference = [first_match_triple[0], "rdfs:subClassOf", "rdfs:Resource"]
         if not new_inference in triples and not new_inference in shared_list:
             inferenced.append(new_inference)
-            saved_graph_inferences.write(" ".join(first_match_triple) + ",rdfs8," + " ".join(new_inference) + "\n")
+            inferences_paths.append(" ".join(first_match_triple) + ",rdfs8," + " ".join(new_inference) + "\n")
             shared_list.append(new_inference)
             saved_inferences.write(" ".join(first_match_triple) + " =8> " + " ".join(new_inference) + "\n")
 
-    return inferenced
+    return inferenced, inferences_paths
 
 def match_rdfs9(triples):
     inferenced = []
+    inferences_paths = []
     first_match = match_one(triples, second='rdfs:subClassOf')
     for first_match_triple in first_match:
         second_match = match_one(triples, second="rdf:type", third=first_match_triple[0])
@@ -218,28 +226,30 @@ def match_rdfs9(triples):
             if not new_inference in triples and not new_inference in shared_list:
                 inferenced.append(new_inference)
                 shared_list.append(new_inference)
-                saved_graph_inferences.write(" ".join(first_match_triple) + ",rdfs9," + " ".join(new_inference) + "\n")
-                saved_graph_inferences.write(" ".join(second_match_triple) + ",rdfs9," + " ".join(new_inference) + "\n")
+                inferences_paths.append(" ".join(first_match_triple) + ",rdfs9," + " ".join(new_inference) + "\n")
+                inferences_paths.append(" ".join(second_match_triple) + ",rdfs9," + " ".join(new_inference) + "\n")
                 saved_inferences.write(
                     " ".join(first_match_triple) + " & " + " ".join(second_match_triple) + " =9> " + " ".join(new_inference) + "\n")
 
-    return inferenced
+    return inferenced, inferences_paths
 
 def match_rdfs10(triples):
     inferenced = []
+    inferences_paths = []
     first_match = match_one(triples, second="rdf:type", third="rdfs:Class")
     for first_match_triple in first_match:
         new_inference = [first_match_triple[0], "rdfs:subClassOf", first_match_triple[0]]
         if not new_inference in triples and not new_inference in shared_list:
             inferenced.append(new_inference)
             shared_list.append(new_inference)
-            saved_graph_inferences.write(" ".join(first_match_triple) + ",rdfs10," + " ".join(new_inference) + "\n")
+            inferences_paths.append(" ".join(first_match_triple) + ",rdfs10," + " ".join(new_inference) + "\n")
             saved_inferences.write(" ".join(first_match_triple) + " =10> " + " ".join(new_inference) + "\n")
 
-    return inferenced
+    return inferenced, inferences_paths
 
 def match_rdfs11(triples):
     inferenced = []
+    inferences_paths = []
     first_match = match_one(triples, second='rdfs:subClassOf')
     for first_match_triple in first_match:
         second_match = match_one(triples, first=first_match_triple[2], second="rdfs:subClassOf")
@@ -248,25 +258,26 @@ def match_rdfs11(triples):
             if not new_inference in triples and not new_inference in shared_list:
                 inferenced.append(new_inference)
                 shared_list.append(new_inference)
-                saved_graph_inferences.write(" ".join(first_match_triple) + ",rdfs11," + " ".join(new_inference) + "\n")
-                saved_graph_inferences.write(" ".join(second_match_triple) + ",rdfs11," + " ".join(new_inference) + "\n")
+                inferences_paths.append(" ".join(first_match_triple) + ",rdfs11," + " ".join(new_inference) + "\n")
+                inferences_paths.append(" ".join(second_match_triple) + ",rdfs11," + " ".join(new_inference) + "\n")
                 saved_inferences.write(
                     " ".join(first_match_triple) + " & " + " ".join(second_match_triple) + " =11> " + " ".join(new_inference) + "\n")
 
-    return inferenced
+    return inferenced, inferences_paths
 
 def match_rdfs12(triples):
     inferenced = []
+    inferences_paths = []
     first_match = match_one(triples, second="rdf:type", third="rdfs:ContainerMembershipProperty")
     for first_match_triple in first_match:
         new_inference = [first_match_triple[0], "rdfs:subPropertyOf", "rdfs:member"]
         if not new_inference in triples and not new_inference in shared_list:
             inferenced.append(new_inference)
             shared_list.append(new_inference)
-            saved_graph_inferences.write(" ".join(first_match_triple) + ",rdfs12," + " ".join(new_inference) + "\n")
+            inferences_paths.append(" ".join(first_match_triple) + ",rdfs12," + " ".join(new_inference) + "\n")
             saved_inferences.write(" ".join(first_match_triple) + " =12> "  + " ".join(new_inference) + "\n")
 
-    return inferenced
+    return inferenced, inferences_paths
 
 def match_container(triples):
     matches = match_one(triples, third="rdfs:ContainerMembershipProperty")
@@ -274,13 +285,14 @@ def match_container(triples):
 
 def match_rdfs13(triples):
     inferenced = []
+    inferences_paths = []
     first_match = match_one(triples, second="rdf:type", third="rdfs:Datatype")
     for first_match_triple in first_match:
         new_inference = [first_match_triple[0], "rdfs:subClassOf", "rdfs:Literal"]
         if not new_inference in triples and not new_inference in shared_list:
             inferenced.append(new_inference)
-            saved_graph_inferences.write(" ".join(first_match_triple) + ",rdfs13," + " ".join(new_inference) + "\n")
+            inferences_paths.append(" ".join(first_match_triple) + ",rdfs13," + " ".join(new_inference) + "\n")
             shared_list.append(new_inference)
             saved_inferences.write(" ".join(first_match_triple)  + " =13> "  + " ".join(new_inference) + "\n")
 
-    return inferenced
+    return inferenced, inferences_paths

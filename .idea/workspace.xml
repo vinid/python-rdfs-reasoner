@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cca985b6-09e5-4468-bcfd-6b0199a5a33f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/preferred-vcs.xml" afterPath="$PROJECT_DIR$/.idea/preferred-vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_rdfs_reasoner/run_multi_inference.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python_rdfs_reasoner/chain_inferences.py" afterPath="$PROJECT_DIR$/python_rdfs_reasoner/chain_inferences.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python_rdfs_reasoner/debug/debug_saved_graph_inferences" afterPath="$PROJECT_DIR$/python_rdfs_reasoner/debug/debug_saved_graph_inferences" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python_rdfs_reasoner/debug/debug_saved_inferences" afterPath="$PROJECT_DIR$/python_rdfs_reasoner/debug/debug_saved_inferences" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python_rdfs_reasoner/entailment_rules.py" afterPath="$PROJECT_DIR$/python_rdfs_reasoner/entailment_rules.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python_rdfs_reasoner/inferenced/DAO_2.json/K_2.json" afterPath="$PROJECT_DIR$/python_rdfs_reasoner/inferenced/DAO_2.json/K_2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python_rdfs_reasoner/inferenced/DAO_2.json/K_3.json" afterPath="$PROJECT_DIR$/python_rdfs_reasoner/inferenced/DAO_2.json/K_3.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python_rdfs_reasoner/inferenced/DAO_2.json/K_AggregatedInference" afterPath="$PROJECT_DIR$/python_rdfs_reasoner/inferenced/DAO_2.json/K_AggregatedInference" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python_rdfs_reasoner/python_rdfs_reasoner.py" afterPath="$PROJECT_DIR$/python_rdfs_reasoner/python_rdfs_reasoner.py" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -28,74 +32,51 @@
       <file leaf-file-name="python_rdfs_reasoner.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/python_rdfs_reasoner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="75" column="16" lean-forward="false" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
+            <state relative-caret-position="319">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run_multi_inference.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/run_multi_inference.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="16" column="59" lean-forward="false" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
               <folding>
-                <element signature="e#44#55#0" expanded="true" />
+                <element signature="e#0#14#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="K_1.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/inferenced/DAO_2.json/K_1.json">
+      <file leaf-file-name="chain_inferences.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/chain_inferences.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="11" />
+            <state relative-caret-position="659">
+              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="K_2.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/inferenced/DAO_2.json/K_2.json">
+      <file leaf-file-name="DAO_2.json_load_chainer" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/chains/DAO_2.json_load_chainer">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="0" column="6787" lean-forward="false" selection-start-line="0" selection-start-column="6780" selection-end-line="0" selection-end-column="6787" />
+            <state relative-caret-position="377">
+              <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="K_3.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/inferenced/DAO_2.json/K_3.json">
+      <file leaf-file-name="entailment_rules.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/entailment_rules.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3306">
-              <caret line="0" column="12871" lean-forward="true" selection-start-line="0" selection-start-column="12871" selection-end-line="0" selection-end-column="12871" />
+            <state relative-caret-position="58">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="25" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rdfs_axioms" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/rdfs_axioms">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="5" column="31" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="K_0.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/inferenced/DAO_2.json/K_0.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="4141" lean-forward="false" selection-start-line="0" selection-start-column="4136" selection-end-line="0" selection-end-column="4141" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="290">
-                <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="64" />
-                <folding />
-              </first_editor>
-              <second_editor />
             </state>
           </provider>
         </entry>
@@ -111,14 +92,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>rdfs:Res</find>
-      <find>dbpedia:L</find>
-      <find>dbpedia:Lorazepam rdf:type rdfs:Res</find>
-      <find>dbpedia:Lorazepam</find>
-      <find>print</find>
-      <find>dbpedia:Lorazepam rdf:type rdfs:Resource</find>
-      <find>saved_inferences_list.add(tuple(new_inference))</find>
-      <find>in saved_inferences_list</find>
       <find>tuple(new_inference)</find>
       <find>rdf:rest rdf:type rdfs:Literal</find>
       <find>add</find>
@@ -130,9 +103,7 @@
       <find>rdf:Alt rdfs:subClassOf rdfs:Container</find>
       <find>saved_inferences</find>
       <find>:Drug rdfs:subClassOf :</find>
-      <find>:Drug rdf:type rdfs:Class</find>
       <find>subclass</find>
-      <find>:Drug rdfs:subClassOf rdfs:Resource</find>
       <find>json_data</find>
       <find>InferredA</find>
       <find>Invalida</find>
@@ -141,6 +112,16 @@
       <find>Side</find>
       <find>Inferre</find>
       <find>InvalidAxioms</find>
+      <find>InvalidAxi</find>
+      <find>:Tramadol rdfs:subClassOf :Tramadol</find>
+      <find>:Side_effect rdfs</find>
+      <find>Ms Con</find>
+      <find>Ms Contin</find>
+      <find>Ms</find>
+      <find>Side Eff</find>
+      <find>:Drug rdfs:subClassOf rdfs:Resource</find>
+      <find>:Drug rdf:type rdfs:Class</find>
+      <find>:Frame rdfs:subClassOf :TopicComment</find>
     </findStrings>
     <replaceStrings>
       <replace>saved_inferences_list.add</replace>
@@ -171,12 +152,13 @@
         <option value="$PROJECT_DIR$/python_rdfs_reasoner/saved_inferences" />
         <option value="$PROJECT_DIR$/python_rdfs_reasoner/inferenced/DAO_2.json/K_4" />
         <option value="$PROJECT_DIR$/python_rdfs_reasoner/test_kg/util.py" />
-        <option value="$PROJECT_DIR$/python_rdfs_reasoner/entailment_rules.py" />
         <option value="$PROJECT_DIR$/chain_inferences.py" />
-        <option value="$PROJECT_DIR$/python_rdfs_reasoner/chain_inferences.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/python_rdfs_reasoner/debug/debug_saved_inferences" />
+        <option value="$PROJECT_DIR$/python_rdfs_reasoner/entailment_rules.py" />
         <option value="$PROJECT_DIR$/python_rdfs_reasoner/python_rdfs_reasoner.py" />
+        <option value="$PROJECT_DIR$/python_rdfs_reasoner/chain_inferences.py" />
+        <option value="$PROJECT_DIR$/python_rdfs_reasoner/run_multi_inference.py" />
       </list>
     </option>
   </component>
@@ -206,6 +188,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -232,86 +216,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python_rdfs_reasoner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python_rdfs_reasoner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python_rdfs_reasoner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="knowledge_graphs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python_rdfs_reasoner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python_rdfs_reasoner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python_rdfs_reasoner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inferenced" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python_rdfs_reasoner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python_rdfs_reasoner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python_rdfs_reasoner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inferenced" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DAO_2.json" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python_rdfs_reasoner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python_rdfs_reasoner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python_rdfs_reasoner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="debug" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -598,29 +504,29 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="33" width="2560" height="1339" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26845095" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2891918" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26358476" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2891918" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -636,28 +542,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/inferenced/DAO_1.json/K_6" />
-    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/knowledge_graphs/subClass_1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/inferenced/subClass_1.json/K_0">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="456" column="12" lean-forward="false" selection-start-line="456" selection-start-column="0" selection-end-line="456" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/inferenced/subClass_1.json/K_6">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/inferenced/subClass_1.json/K_7">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29">
@@ -806,13 +690,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/inferenced/DAO_2.json/K_4" />
-    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/inferenced/DAO_2.json/K_AggregatedInference">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="108" column="35" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="58">
@@ -827,22 +704,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/chain_inferences.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1015">
-          <caret line="35" column="4" lean-forward="false" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/inferenced/DAO_2.json/K_2" />
     <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/inferenced/DAO_2.json/K_3" />
-    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/entailment_rules.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5974">
-          <caret line="206" column="23" lean-forward="false" selection-start-line="206" selection-start-column="23" selection-end-line="206" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/inferenced/DAO_2.json/K_0" />
     <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/debug/debug_saved_graph_inferences">
       <provider selected="true" editor-type-id="text-editor">
@@ -852,25 +715,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/inferenced/DAO_2.json/K_1" />
-    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/knowledge_graphs/DAO_2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/debug/debug_saved_inferences">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="344" column="25" lean-forward="false" selection-start-line="344" selection-start-column="0" selection-end-line="344" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/rdfs_axioms">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
-          <caret line="5" column="31" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <caret line="5" column="31" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -879,14 +734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/inferenced/DAO_2.json/K_0.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="4141" lean-forward="false" selection-start-line="0" selection-start-column="4136" selection-end-line="0" selection-end-column="4141" />
           <folding />
         </state>
       </provider>
@@ -902,29 +749,100 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/knowledge_graphs/DAO_1.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/inferenced/DAO_2.json/K_0.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13286" lean-forward="false" selection-start-line="0" selection-start-column="13286" selection-end-line="0" selection-end-column="13295" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/inferenced/DAO_2.json/K_2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="4144" lean-forward="false" selection-start-line="0" selection-start-column="4136" selection-end-line="0" selection-end-column="4144" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/inferenced/DAO_2.json/K_3.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3306">
-          <caret line="0" column="12871" lean-forward="true" selection-start-line="0" selection-start-column="12871" selection-end-line="0" selection-end-column="12871" />
+        <state relative-caret-position="0">
+          <caret line="0" column="9243" lean-forward="false" selection-start-line="0" selection-start-column="9239" selection-end-line="0" selection-end-column="9243" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/knowledge_graphs/DAO_2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5373" lean-forward="false" selection-start-line="0" selection-start-column="5373" selection-end-line="0" selection-end-column="5373" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/inferenced/DAO_2.json/K_AggregatedInference">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1073">
+          <caret line="37" column="23" lean-forward="false" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/knowledge_graphs/DAO_2.json_load_chainer">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11578">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/entailment_rules.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/chains/DAO_2.json_load_chainer">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/chain_inferences.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="659">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/python_rdfs_reasoner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="75" column="16" lean-forward="false" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
-          <folding>
-            <element signature="e#44#55#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="319">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/inferenced/DAO_2.json/K_2.json">
+    <entry file="file://$PROJECT_DIR$/python_rdfs_reasoner/run_multi_inference.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="0" column="6787" lean-forward="false" selection-start-line="0" selection-start-column="6780" selection-end-line="0" selection-end-column="6787" />
-          <folding />
+        <state relative-caret-position="464">
+          <caret line="16" column="59" lean-forward="false" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
