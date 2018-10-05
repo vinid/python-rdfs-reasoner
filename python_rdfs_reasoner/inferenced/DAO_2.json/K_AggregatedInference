@@ -63,7 +63,6 @@ rdf:predicate rdf:type rdfs:Resource .
 rdf:object rdf:type rdfs:Resource .
 rdf:first rdf:type rdfs:Resource .
 rdf:rest rdf:type rdfs:Resource .
-rdfs:seeAlso rdf:type rdfs:Resource .
 rdfs:isDefinedBy rdf:type rdfs:Resource .
 rdfs:comment rdf:type rdfs:Resource .
 rdfs:label rdf:type rdfs:Resource .
@@ -98,6 +97,7 @@ rdf:Statement rdf:type rdfs:Resource .
 rdf:List rdf:type rdfs:Resource .
 rdfs:Literal rdf:type rdfs:Resource .
 rdfs:Container rdf:type rdfs:Resource .
+rdfs:seeAlso rdf:type rdfs:Resource .
 rdf:subject rdfs:subPropertyOf rdf:subject .
 rdf:predicate rdfs:subPropertyOf rdf:predicate .
 rdf:object rdfs:subPropertyOf rdf:object .

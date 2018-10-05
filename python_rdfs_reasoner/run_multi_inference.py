@@ -26,19 +26,6 @@ def main():
 
         os.system("python " + cwd + "/python_rdfs_reasoner.py -f " + cwd + "/" + args.folder + file)
 
-        ent = Entailment(args.folder + file)
-        ent.generate_inferences()
-
-        elapsed_time = time.time() - start_time
-        logging.info('Elapsed Time = ' + str(elapsed_time))
-        logging.info("Set of Jena Inferences - Set of Reasoner Inferences " +
-                     str(len(diff(ent.jena_inferenced, ent.inferenced_triples))))
-        logging.info("Set of Reasoner Inferences - Set of Jena Inferences " +
-                     str(len(diff(ent.inferenced_triples, ent.jena_inferenced))))
-
-        logging.info("Missing Triples from Reasoner")
-        logging.info((([" ".join(k) for k in (diff(ent.jena_inferenced, ent.inferenced_triples + ent.lines))] )))
-
 
 
 

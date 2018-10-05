@@ -252,7 +252,6 @@ m2:n5b rdf:type owl:NamedIndividual,rdfs4a,m2:n5b rdf:type rdfs:Resource
 predose:with_frequency rdfs:range :Frequency,rdfs4a,predose:with_frequency rdf:type rdfs:Resource
 :Depodur rdfs:label Depodur,rdfs4a,:Depodur rdf:type rdfs:Resource
 drugbank:DB01452 rdf:type owl:NamedIndividual,rdfs4a,drugbank:DB01452 rdf:type rdfs:Resource
-:Side_effect rdf:type owl:Class,rdfs4a,:Side_effect rdf:type rdfs:Resource
 opencyc:Mx4rwBGgXJwpEbGdrcN5Y29ycA rdf:type owl:NamedIndividual,rdfs4a,opencyc:Mx4rwBGgXJwpEbGdrcN5Y29ycA rdf:type rdfs:Resource
 dbpedia:Lorazepam rdf:type owl:NamedIndividual,rdfs4a,dbpedia:Lorazepam rdf:type rdfs:Resource
 dbpedia:Side_effect owl:sameAs :Side_effect,rdfs4a,dbpedia:Side_effect rdf:type rdfs:Resource
@@ -268,7 +267,6 @@ rdf:object rdfs:domain rdf:Statement,rdfs4a,rdf:object rdf:type rdfs:Resource
 rdfs:member rdfs:domain rdfs:Resource,rdfs4a,rdfs:member rdf:type rdfs:Resource
 rdf:first rdfs:domain rdf:List,rdfs4a,rdf:first rdf:type rdfs:Resource
 rdf:rest rdfs:domain rdf:List,rdfs4a,rdf:rest rdf:type rdfs:Resource
-rdfs:seeAlso rdfs:domain rdfs:Resource,rdfs4a,rdfs:seeAlso rdf:type rdfs:Resource
 rdfs:isDefinedBy rdfs:domain rdfs:Resource,rdfs4a,rdfs:isDefinedBy rdf:type rdfs:Resource
 rdfs:comment rdfs:domain rdfs:Resource,rdfs4a,rdfs:comment rdf:type rdfs:Resource
 rdfs:label rdfs:domain rdfs:Resource,rdfs4a,rdfs:label rdf:type rdfs:Resource
@@ -319,6 +317,7 @@ predose:has_preparation_method rdfs:range :preparation,rdfs4b,:preparation rdf:t
 predose:with_frequency rdfs:domain :User_drug_usage,rdfs4b,:User_drug_usage rdf:type rdfs:Resource
 :Ms_Contin predose:has_slang_term mscontin,rdfs4b,mscontin rdf:type rdfs:Resource
 :Laudacon rdf:type :Hydromorphone,rdfs4b,:Hydromorphone rdf:type rdfs:Resource
+dbpedia:Side_effect owl:sameAs :Side_effect,rdfs4b,:Side_effect rdf:type rdfs:Resource
 dbpedia:Lorazepam owl:sameAs :Lorazepam,rdfs4b,:Lorazepam rdf:type rdfs:Resource
 :Tramadol owl:sameAs m4:l6z8,rdfs4b,m4:l6z8 rdf:type rdfs:Resource
 :LSD rdf:type :Hallucinogen,rdfs4b,:Hallucinogen rdf:type rdfs:Resource
@@ -332,6 +331,7 @@ rdf:subject rdfs:domain rdf:Statement,rdfs4b,rdf:Statement rdf:type rdfs:Resourc
 rdf:first rdfs:domain rdf:List,rdfs4b,rdf:List rdf:type rdfs:Resource
 rdfs:comment rdfs:range rdfs:Literal,rdfs4b,rdfs:Literal rdf:type rdfs:Resource
 rdf:Alt rdfs:subClassOf rdfs:Container,rdfs4b,rdfs:Container rdf:type rdfs:Resource
+rdfs:isDefinedBy rdfs:subPropertyOf rdfs:seeAlso,rdfs4b,rdfs:seeAlso rdf:type rdfs:Resource
 predose:has_preparation_method rdf:type rdf:Property,rdfs6,predose:has_preparation_method rdfs:subPropertyOf predose:has_preparation_method
 predose:with_frequency rdf:type rdf:Property,rdfs6,predose:with_frequency rdfs:subPropertyOf predose:with_frequency
 rdf:type rdf:type rdf:Property,rdfs6,rdf:type rdfs:subPropertyOf rdf:type
