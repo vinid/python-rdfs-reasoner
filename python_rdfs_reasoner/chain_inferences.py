@@ -1,7 +1,10 @@
 import argparse
 import networkx as nx
 import pandas as pd
+import sys
+reload(sys)
 
+sys.setdefaultencoding('utf8')
 def get_chain_of_inference(node, G):
     neig = G.edges(node)
     if len(neig) == 2:

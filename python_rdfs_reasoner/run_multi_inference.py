@@ -2,6 +2,12 @@ import logging
 from python_rdfs_reasoner import *
 from os import listdir
 from os.path import isfile, join
+from subprocess import call
+
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 def main():
 
     parser = argparse.ArgumentParser()
@@ -15,6 +21,11 @@ def main():
     for file in files:
         start_time = time.time()
         logging.info("Reasoning over " + args.folder + file)
+        import os
+        cwd = os.getcwd()
+
+        os.system("python " + cwd + "/python_rdfs_reasoner.py -f " + cwd + "/" + args.folder + file)
+
         ent = Entailment(args.folder + file)
         ent.generate_inferences()
 

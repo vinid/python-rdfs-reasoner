@@ -11,6 +11,13 @@ To generate the inferences from the axiom you can use the following command.
 python2.7 python_rdfs_reasoner.py -f knowledge_graphs/DAO_2.json
 ```
 
+You can also run inferences over a set of files in a folder using the following command.
+
+```python
+python run_multi_inference.py -f knowledge_graphs/
+```
+
+
 ## Chain Retrieval
 
 To print the chain of relation inferences that generated a given axiom you can use the following command.

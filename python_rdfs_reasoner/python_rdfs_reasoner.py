@@ -11,6 +11,10 @@ import argparse
 import time
 import logging
 
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 logging.basicConfig(level=logging.INFO)
 logging.debug('This will get logged')
 
@@ -43,11 +47,10 @@ class Entailment:
         if not os.path.exists(self.path):
             os.makedirs(self.path)
 
-        # Creating the graph of the triples inferred by Jena
-
-        with open(self.path + "K_Jena_Inferrence", "w") as kg_inf_write:
-            for k in self.jena_inferenced:
-                kg_inf_write.write(k[0] + " " + k[1] + " " + k[2] + " ." + "\n")
+        #with open(self.path + "K_Jena_Inferrence", "w") as kg_inf_write:
+        #    for k in self.jena_inferenced:
+        #        print(k)
+        #        kg_inf_write.write(k[0] + " " + k[1] + " " + k[2] + " ." + "\n")
 
         # Creating the first graph with the triples
         with open(self.path + "K_0.json", "w") as kg_inf_write:
@@ -178,7 +181,7 @@ def main():
     elapsed_time = time.time() - start_time
     logging.info('Elapsed Time = ' + str(elapsed_time))
     logging.info("Set of Jena Inferences - Set of Reasoner Inferences " +
-                 str(len(diff(ent.jena_inferenced, ent.inferenced_triples))))
+                 str(len(diff(ent.jena_inferenced, ent.inferenced_triples + ent.lines))))
     logging.info("Set of Reasoner Inferences - Set of Jena Inferences " +
                  str(len(diff(ent.inferenced_triples, ent.jena_inferenced))))
 
