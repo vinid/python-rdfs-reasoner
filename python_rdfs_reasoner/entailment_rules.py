@@ -1,7 +1,7 @@
 import pypatt
 import os
 from multiprocessing import Manager
-
+import time
 if not os.path.exists("debug/"):
     os.makedirs("debug/")
 
@@ -11,73 +11,91 @@ saved_inferences = open("debug/debug_saved_inferences", "w")
 manager = Manager()
 shared_list = manager.list()
 
-@pypatt.transform
+
 def match_one(triples, first = None, second = None, third = None):
     results = []
-    for value in triples:
+    try:
+        #for value in triples:
         if first == None and second != None and third != None: #FVV
-            with match(value):
-                with [quote(d1), second, third]:
-                    results.append((d1, second, third))
+            results = filter(lambda x : x[2] == third and x[1] == second, triples)
+            #with match(value):
+            #    with [quote(d1), second, third]:
+                    #results.append((d1, second, third))
         if first == None and second == None and third != None: #FFV
-            with match(value):
-                with [quote(d1), quote(d2), third]:
-                    results.append((d1, d2, third))
+            results = filter(lambda x: x[2] == third, triples)
+            #with match(value):
+            #    with [quote(d1), quote(d2), third]:
+            #        results.append((d1, d2, third))
         if first == None and second == None and third == None: #FFF
-            with match(value):
-                with [quote(d1), quote(d2), quote(d3)]:
-                    results.append((d1, d2, d3))
+            results = triples
+            #with match(value):
+            #    with [quote(d1), quote(d2), quote(d3)]:
+            #        results.append((d1, d2, d3))
         if first != None and second == None and third != None: #VFV
-            with match(value):
-                with [first, quote(d2), third]:
-                    results.append((first, d2, third))
+            results = filter(lambda x: x[0] == first and x[2] == third, triples)
+            #with match(value):
+            #    with [first, quote(d2), third]:
+            #        results.append((first, d2, third))
         if first != None and second == None and third == None: #VFF
-            with match(value):
-                with [first, quote(d2), quote(d3)]:
-                    results.append((first, d2, d3))
+            results = filter(lambda x: x[0] == first, triples)
+            #with match(value):
+            #    with [first, quote(d2), quote(d3)]:
+            #        results.append((first, d2, d3))
         if first == None and second != None and third == None: #FVF
-            with match(value):
-                with [quote(d1), second, quote(d3)]:
-                    results.append((d1, second, d3))
+            results = filter(lambda x: x[1] == second, triples)
+            #with match(value):
+            #    with [quote(d1), second, quote(d3)]:
+            #        results.append((d1, second, d3))
         if first != None and second != None and third != None: #VVV
-            with match(value):
-                with [first, second, third]:
-                    results.append((first, second, third))
+            results = filter(lambda x: x[1] == second and x[0] ==first and x[2] == third, triples)
+            #with match(value):
+            #    with [first, second, third]:
+            #        results.append((first, second, third))
         if first != None and second != None and third == None: #VVF
-            with match(value):
-                with [first, second, quote(d3)]:
-                    results.append((first, second, d3))
+            results = filter(lambda x: x[1] == second and x[0] == first, triples)
+            #with match(value):
+            #    with [first, second, quote(d3)]:
+            #        results.append((first, second, d3))
+    except Exception as e:
+        print("ex" + str(e))
+        pass
     return results
 
 def match_rdfs1(triples):
     first_match = match_one(triples)
     all_values = []
     inferences_paths = []
-    for a,b,c in first_match:
 
-        new_inf_one = [a, "rdf:type", "rdfs:Datatype"]
-        new_inf_two = [b, "rdf:type", "rdfs:Datatype"]
-        new_inf_three = [c, "rdf:type", "rdfs:Datatype"]
+    for k in first_match:
+        try:
+            a = k[0]
+            b = k[1]
+            c = k[2]
+            new_inf_one = [a, "rdf:type", "rdfs:Datatype"]
+            new_inf_two = [b, "rdf:type", "rdfs:Datatype"]
+            new_inf_three = [c, "rdf:type", "rdfs:Datatype"]
 
-        if not new_inf_one in triples and not new_inf_one in shared_list:
-            all_values.append(new_inf_one)
-            shared_list.append(new_inf_one)
-            shared_list.append(new_inf_one)
-            inferences_paths.append(" ".join([a,b,c]) + ",rdfs4a," + " ".join(new_inf_one) + "\n")
-            saved_inferences.write(" ".join([a,b,c]) + " =4a> " + " ".join(new_inf_one) + "\n")
+            if not new_inf_one in triples and not new_inf_one in shared_list:
+                all_values.append(new_inf_one)
+                shared_list.append(new_inf_one)
+                shared_list.append(new_inf_one)
+                inferences_paths.append(" ".join([a,b,c]) + ",rdfs4a," + " ".join(new_inf_one) + "\n")
+                saved_inferences.write(" ".join([a,b,c]) + " =4a> " + " ".join(new_inf_one) + "\n")
 
-        if not new_inf_two in triples and not new_inf_two in shared_list:
-            all_values.append(new_inf_two)
-            shared_list.append(new_inf_two)
-            shared_list.append(new_inf_two)
-            saved_inferences.write(" ".join([a,b,c]) + " =4a> " + " ".join(new_inf_two) + "\n")
-            inferences_paths.append(" ".join([a,b,c]) + ",rdfs4a," + " ".join(new_inf_two) + "\n")
-        if not new_inf_three in triples and not new_inf_three in shared_list:
-            all_values.append(new_inf_three)
-            shared_list.append(new_inf_three)
-            inferences_paths.append(" ".join([a,b,c]) + ",rdfs4a," + " ".join(new_inf_three) + "\n")
-            shared_list.append(new_inf_three)
-            saved_inferences.write(" ".join([a,b,c]) + " =4a> " + " ".join(new_inf_three) + "\n")
+            if not new_inf_two in triples and not new_inf_two in shared_list:
+                all_values.append(new_inf_two)
+                shared_list.append(new_inf_two)
+                shared_list.append(new_inf_two)
+                saved_inferences.write(" ".join([a,b,c]) + " =4a> " + " ".join(new_inf_two) + "\n")
+                inferences_paths.append(" ".join([a,b,c]) + ",rdfs4a," + " ".join(new_inf_two) + "\n")
+            if not new_inf_three in triples and not new_inf_three in shared_list:
+                all_values.append(new_inf_three)
+                shared_list.append(new_inf_three)
+                inferences_paths.append(" ".join([a,b,c]) + ",rdfs4a," + " ".join(new_inf_three) + "\n")
+                shared_list.append(new_inf_three)
+                saved_inferences.write(" ".join([a,b,c]) + " =4a> " + " ".join(new_inf_three) + "\n")
+        except:
+            exit()
     return all_values, inferences_paths
 
 def match_rdfs2(triples):
@@ -120,6 +138,7 @@ def match_rdfs3(triples):
 
 def match_rdfs4a(triples):
     inferenced = []
+    start_time = time.time()
     inferences_paths = []
     first_match = match_one(triples)
     for first_match_triple in first_match:
@@ -130,10 +149,12 @@ def match_rdfs4a(triples):
             inferences_paths.append(" ".join(first_match_triple) + ",rdfs4a," + " ".join(new_inference) + "\n")
             shared_list.append(new_inference)
             saved_inferences.write(" ".join(first_match_triple) + " =4a> " + " ".join(new_inference) + "\n")
-
+    end_time = time.time()
+    print("4a " + str(end_time - start_time))
     return inferenced, inferences_paths
 
 def match_rdfs4b(triples):
+    start_time = time.time()
     inferenced = []
     inferences_paths = []
     first_match = match_one(triples)
@@ -145,13 +166,15 @@ def match_rdfs4b(triples):
             inferences_paths.append(" ".join(first_match_triple) + ",rdfs4b," + " ".join(new_inference) + "\n")
             shared_list.append(new_inference)
             saved_inferences.write(" ".join(first_match_triple) + " =4b> "  + " ".join(new_inference) + "\n")
-
+    end_time = time.time()
+    print("4b " + str(end_time - start_time))
     return inferenced, inferences_paths
 
 def match_rdfs5(triples):
     inferenced = []
+    start_time = time.time()
     inferences_paths = []
-    first_match = match_one(triples, second='rdfs:subPropertyOf')
+    first_match = filter(lambda x : x[1] == "rdfs:subPropertyOf", triples) #match_one(triples, second='rdfs:subPropertyOf')
     for first_match_triple in first_match:
         second_match = match_one(triples, first=first_match_triple[2], second="rdfs:subPropertyOf")
         for second_match_triple in second_match:
@@ -164,10 +187,12 @@ def match_rdfs5(triples):
                 inferences_paths.append(" ".join(second_match_triple) + ",rdfs5," + " ".join(new_inference) + "\n")
                 saved_inferences.write(
                     " ".join(first_match_triple) + " & " + " ".join(second_match_triple) + " =5> " + " ".join(new_inference) + "\n")
-
+    end_time = time.time()
+    print("5 " + str(end_time - start_time))
     return inferenced, inferences_paths
 
 def match_rdfs6(triples):
+    start_time = time.time()
     inferenced = []
     inferences_paths = []
     first_match = match_one(triples, second="rdf:type", third="rdf:Property")
@@ -179,10 +204,12 @@ def match_rdfs6(triples):
             inferences_paths.append(" ".join(first_match_triple) + ",rdfs6," + " ".join(new_inference) + "\n")
             shared_list.append(new_inference)
             saved_inferences.write(" ".join(first_match_triple) + " =6> " + " ".join(new_inference) + "\n")
-
+    end_time = time.time()
+    print("6 " + str(end_time - start_time))
     return inferenced, inferences_paths
 
 def match_rdfs7(triples):
+    start_time = time.time()
     inferenced = []
     inferences_paths = []
     first_match = match_one(triples, second='rdfs:subPropertyOf')
@@ -198,7 +225,8 @@ def match_rdfs7(triples):
                 inferences_paths.append(" ".join(second_match_triple) + ",rdfs7," + " ".join(new_inference) + "\n")
                 saved_inferences.write(
                     " ".join(first_match_triple) + " & " + " ".join(second_match_triple) + " =7> " + " ".join(new_inference) + "\n")
-
+    end_time = time.time()
+    print("7 " + str(end_time - start_time))
     return inferenced, inferences_paths
 
 def match_rdfs8(triples):
